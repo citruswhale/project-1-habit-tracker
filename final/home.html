@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!--Tasks-->
+        <div class="tasks">
+            <h1>Daily Tasks</h1>
+            <div id="plant" class="plant"></div>
+            <ul id="daily-task">
+                <li><label for="habit1">Drink water</label><input type="checkbox" id="habit1"></li>
+                <li><label for="habit2">Sleep on time</label><input type="checkbox" id="habit2"></li>
+                <li><label for="habit3">Code</label><input type="checkbox" id="habit3"></li>
+            </ul>
+        </div>
+        
+        <!-- <div class="streaks">
+            <h1>Current Streak</h1>
+            <p id="streak">7</p>
+            <h1>Longest Streak</h1>
+            <p id="longest-streak">14</p>
+        </div> -->
+
+        <div>
+            <table id="Dailies">
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                        <th>Sunday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Drink Water</td>
+                        <td id="monday1">✖️</td>
+                        <td id="tuesday1">✖️</td>
+                        <td id="wednesday1">✖️</td>
+                        <td id="thursday1">✖️</td>
+                        <td id="friday1">✖️</td>
+                        <td id="saturday1">✖️</td>
+                        <td id="sunday1">✖️</td>
+                    </tr>
+                    <tr>
+                        <td>Sleep on Time</td>
+                        <td id="monday2">✖️</td>
+                        <td id="tuesday2">✖️</td>
+                        <td id="wednesday2">✖️</td>
+                        <td id="thursday2">✖️</td>
+                        <td id="friday2">✖️</td>
+                        <td id="saturday2">✖️</td>
+                        <td id="sunday2">✖️</td>
+                    </tr>
+                    <tr>
+                        <td>Code</td>
+                        <td id="monday3">✖️</td>
+                        <td id="tuesday3">✖️</td>
+                        <td id="wednesday3">✖️</td>
+                        <td id="thursday3">✖️</td>
+                        <td id="friday3">✖️</td>
+                        <td id="saturday3">✖️</td>
+                        <td id="sunday3">✖️</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

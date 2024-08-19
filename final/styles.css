@@ -1,0 +1,148 @@
+html, body {
+    height: 100%; /* Ensure body and html take up full viewport height */
+    margin: 0;    /* Remove default margin */
+}
+
+body {
+    font-family: 'system-ui', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #fdfbef;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto-fit, 50% 50%; /* Sidebar takes 20%, content takes 80% */
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+    gap: 10px;
+}
+
+/* Sidebar menu */
+.sidenav {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #09421b;
+    overflow-x: hidden;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+}
+
+/* Nav menu links */
+.sidenav a {
+    text-align: center;
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #FEFAE0;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #dacaa4;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 25px;}
+}
+
+.tasks {
+    text-align: center;
+    background-color: #f1e2c5;
+    padding: 15px;
+    border-radius: 25px;
+    font-size: 35px;
+    width: 100%;
+}
+
+#plant {
+    width: 100px;
+    height: 150px;
+    background-color: green;
+    border-radius: 50px 50px 0 0;
+    position: relative;
+    margin: 20px auto;
+    transition: background-color 0.3s, height 0.3s;
+}
+
+#plant::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    font-size: 40px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.Dailies {
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+table {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+    margin-right: 700px;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+th, td {
+    border: 1px solid #f1e2c5;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f3e8d1;
+}
+
+td {
+    background-color: #f7efe0;
+}
+
+tr {
+    height: calc(100% / 8); /* Adjust the number based on the number of rows */
+}
+
+.completed {
+    background-color: #c8e6c9; /* Light green for completed */
+}
+
+.not-completed {
+    background-color: #ffcdd2; /* Light red for not completed */
+}
